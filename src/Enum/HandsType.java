@@ -1,16 +1,18 @@
-package Enum.Cards;
+package Enum;
 
-public enum Suits {
-    HEART("H"),
-    DIA("D"),
-    SPADE("S"),
-    CLOVER("C")
-    ;
-
+public enum HandsType {
+    STRAIGHT_FLUSH("7"),
+    FOUR_OF_KINDS("6"),
+    FULL_HOUSE("5"),
+    FLUSH("4"),
+    STRAIGHT("3"),
+    THREE_OF_KIND("2"),
+    TWO_PAIRS("1"),
+    HIGH_CARD("0");
 
     private String code;
 
-    Suits(String code) {
+    HandsType(String code) {
         this.code  = code;
     }
 
@@ -19,9 +21,9 @@ public enum Suits {
     }
 
     public static String toName(String code) {
-        Suits[] values = values();
+        HandsType[] values = values();
 
-        for (Suits value: values) {
+        for (HandsType value: values) {
             if (value.getCode().equals(code)) {
                 return value.toString();
             }
@@ -29,4 +31,6 @@ public enum Suits {
 
         throw new IllegalArgumentException("Illegal code : " + code);
     }
+
+
 }

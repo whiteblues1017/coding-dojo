@@ -1,16 +1,14 @@
-package Enum.Cards;
+package Enum;
 
-public enum Suits {
-    HEART("H"),
-    DIA("D"),
-    SPADE("S"),
-    CLOVER("C")
+public enum ResultType {
+    WIN("1"),
+    DRAW("0"),
+    LOSE("-1")
     ;
-
 
     private String code;
 
-    Suits(String code) {
+    ResultType(String code) {
         this.code  = code;
     }
 
@@ -19,9 +17,9 @@ public enum Suits {
     }
 
     public static String toName(String code) {
-        Suits[] values = values();
+        ResultType[] values = values();
 
-        for (Suits value: values) {
+        for (ResultType value: values) {
             if (value.getCode().equals(code)) {
                 return value.toString();
             }
@@ -29,4 +27,5 @@ public enum Suits {
 
         throw new IllegalArgumentException("Illegal code : " + code);
     }
+
 }
