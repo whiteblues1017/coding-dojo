@@ -1,13 +1,14 @@
 package Enum;
 
 public enum HandsType {
-    STRAIGHT_FLUSH("7"),
-    FOUR_OF_KINDS("6"),
-    FULL_HOUSE("5"),
-    FLUSH("4"),
-    STRAIGHT("3"),
-    THREE_OF_KIND("2"),
-    TWO_PAIRS("1"),
+    STRAIGHT_FLUSH("8"),
+    FOUR_OF_KINDS("7"),
+    FULL_HOUSE("6"),
+    FLUSH("5"),
+    STRAIGHT("4"),
+    THREE_OF_KIND("3"),
+    TWO_PAIRS("2"),
+    PAIR("1"),
     HIGH_CARD("0");
 
     private String code;
