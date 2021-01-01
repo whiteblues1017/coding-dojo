@@ -105,7 +105,6 @@ public class Field {
         player.setHand(judgePlayerHand(player.getCards()));
 
         // 黒魔術感がすごい
-        System.out.println(strengthNumbers.get(judgeStrongestPlayerCard(player)));
         player.setStrongestNumber(Numbers.valueOf(Numbers.toName(strengthNumbers.get(judgeStrongestPlayerCard(player)))));
 
         return player;

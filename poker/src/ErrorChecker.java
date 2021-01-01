@@ -9,7 +9,7 @@ public class ErrorChecker {
     public static void checkInputString(String row) throws Exception {
         Pattern pattern = Pattern.compile(".*:( (A|[2-9]|10|[JQK])[HDSC]){5}");
         Matcher matcher = pattern.matcher(row);
-        System.out.println(matcher.matches());
+
         if (!matcher.matches()) {
             throw new InputException("Illegal input player information : " + row);
         }
